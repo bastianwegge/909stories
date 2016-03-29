@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <title>Angular Material - Starter App</title>
+    <title>909 Stories</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,62 +11,138 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/5.8.6/video-js.css" rel="stylesheet">
+
 
     <style type="text/css">
-        /**
-         * Hide when Angular is not yet loaded and initialized
-         */
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-          display: none !important;
-        }
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+
+      @font-face {
+        font-family: 'TR-909';
+        src: url('fonts/TR-909.eot');
+        src: local('☺'), url('fonts/TR-909.woff') format('woff'), url('fonts/TR-909.ttf') format('truetype'), url('fonts/TR-909.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .headtext{
+        font-weight: light;
+        color: #888;
+        font-size: 14px;
+      };
+
+      .socialbutton{
+        width: 24px !important;
+      };
+
+
+
     </style>
 
   </head>
 
-  <body ng-app="starterApp" layout="row" ng-controller="UserController as ul" ng-cloak >
+  <body ng-app="909stories" layout="column" ng-cloak>
 
-  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-      md-component-id="left"
-      ng-click="ul.toggleList()" aria-label="Show User List"
-      md-is-locked-open="$mdMedia('gt-sm')">
-
-    <md-toolbar class="md-whiteframe-z1">
-      <h3>Users</h3>
-    </md-toolbar>
-
-    <md-list>
-      <md-list-item ng-repeat="it in ul.users">
-          <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
-            <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-            {{it.name}}
-          </md-button>
-      </md-list-item>
-    </md-list>
-
-  </md-sidenav>
+<div flex="100" layout="column">
 
 
-  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+  <md-content style="background-color: #000;" layout-padding>
 
-    <md-toolbar layout="row" class="md-whiteframe-z1">
-      <md-button id="main" class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-        <md-icon md-svg-icon="menu" ></md-icon>
-      </md-button>
-      <h3>Angular Material - Starter App</h3>
-    </md-toolbar>
 
-    <md-content flex id="content">
-        <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-        <h2>{{ul.selected.name}}</h2>
-        <p>{{ul.selected.content}}</p>
 
-        <md-button class="contact" md-no-ink ng-click="ul.makeContact(ul.selected)" aria-label="Share with {{ ul.selected.name }}">
-          <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
-          <md-icon md-svg-icon="share"></md-icon>
+    <div flex-offset="10" flex="80" flex-offset-xs="0" flex-xs="100" flex-offset-sm="0" flex-sm="100">
+      
+      <img src="./img/synth_top.svg" style="max-width: 1112px; margin-bottom: -4px;">
+      <div layout="row">
+        <img src="./img/synth_left.svg" style="min-height: 200px; margin-left: 55px;">   
+        <div id="keyboard"></div>
+        <img src="./img/synth_right.svg" style="min-height: 200px; "> 
+      </div>
+
+
+      <img style="max-width: 100%; height: auto; justify-content: center; margin-top: 3%; margin-left: 8%; margin-right: 8%;" src="./img/909stories.svg">
+      <div id="keyboard"></div>
+      
+      
+      <md-card flex layout="row" class="md-whiteframe-z2" layout-aling="center center" style="margin-top: 5%; background-color: #222;">
+        <md-button flex style="font-family: 'TR-909'; font-size: 20px; color: #ddd;">
+          Home
         </md-button>
-      </md-content>
+        <md-button flex style="font-family: 'TR-909'; font-size: 20px; color: #ddd;">
+          Sound
+        </md-button>
+        <md-button flex style="font-family: 'TR-909'; font-size: 20px; color: #ddd;">
+          Video
+        </md-button>
+      </md-card>
 
-  </div>
+      <md-card layout-padding style="background-color: #222; margin-top: 1%;">
+        <img flex src="./img/909tour.png" style="max-width: 100%;">
+      </md-card>
+
+<md-card layout-padding style="background-color: #222;">
+      <div layout-align="center center" layout="column" style="margin-top: 2%;">
+        <span style="font-family: 'TR-909'; font-size: 10vw; color: #fff; -webkit-text-stroke: 0.3vw white;">
+          Sound
+        </span>
+      </div>
+
+      <div layout="row" layout-xs="column" layout-sm="column">
+
+        <md-card flex="50" flex-xs="100" flex-sm="100">
+          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13757069&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </md-card>
+
+        <md-card flex="50" flex-xs="100" flex-sm="100">
+          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/152205414&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </md-card>
+
+      </div>
+
+      <div layout="row" layout-xs="column" layout-sm="column" style="margin-bottom: 1%;">
+
+        <md-card flex="50" flex-xs="100" flex-sm="100">
+          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/232268601&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>        
+        </md-card>
+
+        <md-card flex="50" flex-xs="100" flex-sm="100">
+          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215874708&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>       
+        </md-card>
+
+      </div>
+      </md-card>
+
+<md-card layout-padding style="background-color: #222;">
+    <div layout-align="center center" layout="column" style="margin-top: 2%;">
+      <span style="font-family: 'TR-909'; font-size: 10vw; color: #fff; -webkit-text-stroke: 0.3vw white;">
+        Video
+      </span>
+    </div>
+
+    <div layout="column">
+
+      <md-card>
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/DrQgv310GIo" frameborder="0" allowfullscreen></iframe>
+      </md-card>
+      <md-card style="height: 300px; background-color: #000;">
+        <video id="909 Stories - Stur" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+          <!-- <source src="./video/909stur.mp4" type='video/mp4'>
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video> -->
+      </md-card>
+
+    </div>
+</md-card>
+
+  </md-content>
+
+</div>
 
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
@@ -76,11 +152,16 @@
     <script src="./src/users/Users.js"></script>
     <script src="./src/users/UserController.js"></script>
     <script src="./src/users/UserService.js"></script>
+    <script src="audiosynth.js"></script>
+    <script src="http://vjs.zencdn.net/5.8.6/video.js"></script>
+    <script src="./qwertyhancock.js"></script>
+    <script src="./synth.js"></script>
+  <!--  <script type="text/javascript" src="./cb-scripts.js"> -->
 
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'users'])
+              .module('909stories', ['ngMaterial', 'users'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider
@@ -93,12 +174,39 @@
                       .icon("phone"      , "./assets/svg/phone.svg"       , 512);
 
                       $mdThemingProvider.theme('default')
-                          .primaryPalette('brown')
+                          .primaryPalette('grey')
                           .accentPalette('red');
 
               });
 
-    </script>
+
+
+</script>
+
+
+
+<script>
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
