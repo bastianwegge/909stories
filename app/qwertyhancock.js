@@ -312,6 +312,8 @@
             octave_counter = settings.startOctave,
             total_white_keys = getTotalWhiteKeys();
 
+
+
         for (i = 0; i < total_white_keys; i++) {
 
             if (i % this.whiteNotes.length === 0) {

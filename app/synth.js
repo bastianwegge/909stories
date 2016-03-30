@@ -1,44 +1,67 @@
-var keyboard = new QwertyHancock({
-     id: 'keyboard',
-     width: 795,
-     height: 200,
-     octaves: 2,
-     startNote: 'C3',
-});
 
-var context = new AudioContext(),
-    masterVolume = context.createGain(),
-    oscillators = {};
+var keyboardBig = {
+    element: 'keyboardbig',
+    width: 795,
+    height: 200,
+    octaves: 2,
+    startNote: 'C3'
+};
+var keyboardSmall = {
+    element: 'keyboardsmall',
+    width: 400,
+    height: 200,
+    octaves: 1,
+    startNote: 'C3'
+};
 
-masterVolume.gain.value = 0.2;
+var synths = [keyboardBig, keyboardSmall];
 
-masterVolume.connect(context.destination);
+synths.forEach(function(element) {
 
-keyboard.keyDown = function (note, frequency) {
-    var osc = context.createOscillator(),
-        osc2 = context.createOscillator();
+    var attrs = {
+        id: element.element,
+        width: element.width,
+        height: element.height,
+        octaves: element.octaves,
+        startNote: element.startNote
+    };
 
-    osc.frequency.value = frequency;
-    osc.type = 'sawtooth';
-    osc.detune.value = -10;
+    var keyboard = new QwertyHancock(attrs);
 
-    osc2.frequency.value = frequency;
-    osc2.type = 'triangle';
-    osc2.detune.value = 10;
+    var context = new AudioContext(),
+        masterVolume = context.createGain(),
+        oscillators = {};
 
-    osc.connect(masterVolume);
-    osc2.connect(masterVolume);
+    masterVolume.gain.value = 0.2;
 
     masterVolume.connect(context.destination);
 
-    oscillators[frequency] = [osc, osc2];
+    keyboard.keyDown = function(note, frequency) {
+        var osc = context.createOscillator(),
+            osc2 = context.createOscillator();
 
-    osc.start(context.currentTime);
-    osc2.start(context.currentTime);
-};
+        osc.frequency.value = frequency;
+        osc.type = 'sawtooth';
+        osc.detune.value = -10;
 
-keyboard.keyUp = function (note, frequency) {
-    oscillators[frequency].forEach(function (oscillator) {
-        oscillator.stop(context.currentTime);
-    });
-};
+        osc2.frequency.value = frequency;
+        osc2.type = 'triangle';
+        osc2.detune.value = 10;
+
+        osc.connect(masterVolume);
+        osc2.connect(masterVolume);
+
+        masterVolume.connect(context.destination);
+
+        oscillators[frequency] = [osc, osc2];
+
+        osc.start(context.currentTime);
+        osc2.start(context.currentTime);
+    };
+
+    keyboard.keyUp = function(note, frequency) {
+        oscillators[frequency].forEach(function(oscillator) {
+            oscillator.stop(context.currentTime);
+        });
+    };
+});

@@ -38,8 +38,6 @@
         width: 24px !important;
       };
 
-
-
     </style>
 
   </head>
@@ -58,14 +56,16 @@
       <img src="./img/synth_top.svg" style="max-width: 1112px; margin-bottom: -4px;">
       <div layout="row">
         <img src="./img/synth_left.svg" style="min-height: 200px; margin-left: 55px;">   
-        <div id="keyboard"></div>
+        <div class="show-on-big hide-on-small">
+          <div id="keyboardbig"></div>
+        </div>
+        <div class="hide-on-big show-on-small">
+          <div id="keyboardsmall"></div>
+        </div>
         <img src="./img/synth_right.svg" style="min-height: 200px; "> 
       </div>
 
-
       <img style="max-width: 100%; height: auto; justify-content: center; margin-top: 3%; margin-left: 8%; margin-right: 8%;" src="./img/909stories.svg">
-      <div id="keyboard"></div>
-      
       
       <md-card flex layout="row" class="md-whiteframe-z2" layout-aling="center center" style="margin-top: 5%; background-color: #222;">
         <md-button flex style="font-family: 'TR-909'; font-size: 20px; color: #ddd;">
@@ -159,11 +159,9 @@
   <!--  <script type="text/javascript" src="./cb-scripts.js"> -->
 
     <script type="text/javascript">
-
           angular
               .module('909stories', ['ngMaterial', 'users'])
               .config(function($mdThemingProvider, $mdIconProvider){
-
                   $mdIconProvider
                       .defaultIconSet("./assets/svg/avatars.svg", 128)
                       .icon("menu"       , "./assets/svg/menu.svg"        , 24)
@@ -178,10 +176,7 @@
                           .accentPalette('red');
 
               });
-
-
-
-</script>
+    </script>
 
 
 
