@@ -50,21 +50,24 @@
   <md-content style="background-color: #000;" layout-padding>
 
 
+    <div class="top-synth" layout="column" flex layout-align="center center">
+      <div>
+        <img src="./img/synth_top_big.svg" style="width: 1112px; margin-top: -140px;" class="show-on-big hide-on-small">
+        <img src="./img/synth_top_small.svg" style="width: 700px; margin-left: 10px; margin-top: -140px;" class="show-on-small hide-on-big">
+        <div layout="row">
+          <img src="./img/synth_left.svg" style="min-height: 200px; margin-left: 55px; margin-right: 4px;">   
+          <div class="show-on-big hide-on-small">
+            <div id="keyboardbig"></div>
+          </div>
+          <div class="hide-on-big show-on-small">
+            <div id="keyboardsmall"></div>
+          </div>
+          <img src="./img/synth_right.svg" style="min-height: 200px; margin-left: 5px;"> 
+        </div>
+      </div>
+    </div>
 
     <div flex-offset="10" flex="80" flex-offset-xs="0" flex-xs="100" flex-offset-sm="0" flex-sm="100">
-      
-      <img src="./img/synth_top_big.svg" style="width: 1112px; margin-top: -140px;" class="show-on-big hide-on-small">
-      <img src="./img/synth_top_small.svg" style="width: 700px; margin-left: 10px; margin-top: -140px;" class="show-on-small hide-on-big">
-      <div layout="row">
-        <img src="./img/synth_left.svg" style="min-height: 200px; margin-left: 55px; margin-right: 4px;">   
-        <div class="show-on-big hide-on-small">
-          <div id="keyboardbig"></div>
-        </div>
-        <div class="hide-on-big show-on-small">
-          <div id="keyboardsmall"></div>
-        </div>
-        <img src="./img/synth_right.svg" style="min-height: 200px; margin-left: 5px;"> 
-      </div>
 
       <img style="max-width: 100%; height: auto; justify-content: center; margin-top: 3%; margin-left: 8%; margin-right: 8%;" src="./img/909stories.svg">
       
@@ -84,62 +87,63 @@
         <img flex src="./img/909tour.png" style="max-width: 100%;">
       </md-card>
 
-<md-card layout-padding style="background-color: #222;">
-      <div layout-align="center center" layout="column" style="margin-top: 2%;">
-        <span style="font-family: 'TR-909'; font-size: 10vw; color: #fff; -webkit-text-stroke: 0.3vw white;">
-          Sound
-        </span>
-      </div>
+      <md-card layout-padding style="background-color: #222;">
+        <div layout-align="center center" layout="column" style="margin-top: 2%;">
+          <span style="font-family: 'TR-909'; font-size: 10vw; color: #fff; -webkit-text-stroke: 0.3vw white;">
+            Sound
+          </span>
+        </div>
 
-      <div layout="row" layout-xs="column" layout-sm="column">
+        <div layout="row" layout-xs="column" layout-sm="column">
 
-        <md-card flex="50" flex-xs="100" flex-sm="100">
-          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13757069&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-        </md-card>
+          <md-card flex="50" flex-xs="100" flex-sm="100">
+            <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13757069&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          </md-card>
 
-        <md-card flex="50" flex-xs="100" flex-sm="100">
-          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/152205414&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-        </md-card>
+          <md-card flex="50" flex-xs="100" flex-sm="100">
+            <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/152205414&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          </md-card>
 
-      </div>
+        </div>
 
-      <div layout="row" layout-xs="column" layout-sm="column" style="margin-bottom: 1%;">
+        <div layout="row" layout-xs="column" layout-sm="column" style="margin-bottom: 1%;">
 
-        <md-card flex="50" flex-xs="100" flex-sm="100">
-          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/232268601&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>        
-        </md-card>
+          <md-card flex="50" flex-xs="100" flex-sm="100">
+            <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/232268601&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>        
+          </md-card>
 
-        <md-card flex="50" flex-xs="100" flex-sm="100">
-          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215874708&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>       
-        </md-card>
+          <md-card flex="50" flex-xs="100" flex-sm="100">
+            <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215874708&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>       
+          </md-card>
 
-      </div>
+        </div>
       </md-card>
 
-<md-card layout-padding style="background-color: #222;">
-    <div layout-align="center center" layout="column" style="margin-top: 2%;">
-      <span style="font-family: 'TR-909'; font-size: 10vw; color: #fff; -webkit-text-stroke: 0.3vw white;">
-        Video
-      </span>
+      <md-card layout-padding style="background-color: #222;">
+          <div layout-align="center center" layout="column" style="margin-top: 2%;">
+            <span style="font-family: 'TR-909'; font-size: 10vw; color: #fff; -webkit-text-stroke: 0.3vw white;">
+              Video
+            </span>
+          </div>
+
+          <div layout="column">
+
+            <md-card>
+              <iframe width="100%" height="400" src="https://www.youtube.com/embed/DrQgv310GIo" frameborder="0" allowfullscreen></iframe>
+            </md-card>
+            <md-card style="height: 300px; background-color: #000;">
+              <video id="909 Stories - Stur" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+                <!-- <source src="./video/909stur.mp4" type='video/mp4'>
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a web browser that
+                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>-->
+              </video>
+            </md-card>
+          </div>
+      </md-card>
+
     </div>
-
-    <div layout="column">
-
-      <md-card>
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/DrQgv310GIo" frameborder="0" allowfullscreen></iframe>
-      </md-card>
-      <md-card style="height: 300px; background-color: #000;">
-        <video id="909 Stories - Stur" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
-          <!-- <source src="./video/909stur.mp4" type='video/mp4'>
-          <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-        </video> -->
-      </md-card>
-
-    </div>
-</md-card>
 
   </md-content>
 
