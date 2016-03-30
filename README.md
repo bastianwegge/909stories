@@ -1,4 +1,5 @@
-# 909 Stories Homepage (based of [angular material starter](https://github.com/angular/material-start))
+## 909 Stories Homepage
+(based of [angular material starter](https://github.com/angular/material-start))
 
 
 ## Serving the Application Files
