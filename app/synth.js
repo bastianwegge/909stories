@@ -1,14 +1,14 @@
 
 var keyboardBig = {
     element: 'keyboardbig',
-    width: 795,
+    width: 785,
     height: 200,
     octaves: 2,
     startNote: 'C3'
 };
 var keyboardSmall = {
     element: 'keyboardsmall',
-    width: 400,
+    width: 389,
     height: 200,
     octaves: 1,
     startNote: 'C3'
@@ -45,7 +45,7 @@ synths.forEach(function(element) {
         osc.detune.value = -10;
 
         osc2.frequency.value = frequency;
-        osc2.type = 'triangle';
+        osc2.type = 'sine';
         osc2.detune.value = 10;
 
         osc.connect(masterVolume);
