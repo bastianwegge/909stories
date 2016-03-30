@@ -22,7 +22,8 @@
   "scripts": {
     "postinstall": "",
     "prestart": "npm update",
-    "test": "protractor ./e2e/protractor.conf.js"
+    "test": "protractor ./e2e/protractor.conf.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.13.4"
