@@ -8,11 +8,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
-    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0/angular-material.min.css"/>
+    <!-- <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/> -->
     <link rel="stylesheet" href="assets/app.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="http://vjs.zencdn.net/5.8.6/video-js.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/5.8.6/video-js.css" rel="stylesheet">
 
 
     <style type="text/css">
@@ -50,7 +51,7 @@
   <md-content style="background-color: #000;" layout-padding>
 
 
-    <div class="top-synth" layout="column" flex layout-align="center center">
+    <div id="topSynth" layout="column" flex layout-align="center center">
       <div>
         <img src="./img/synth_top_big.svg" style="width: 1112px; margin-top: -140px;" class="show-on-big hide-on-small">
         <img src="./img/synth_top_small.svg" style="width: 700px; margin-left: 10px; margin-top: -140px;" class="show-on-small hide-on-big">
@@ -149,44 +150,66 @@
 
 </div>
 
-    <script src="./bower_components/angular/angular.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0/angular-material.min.js"></script>
+    <!-- <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script> -->
 
     <script src="./src/users/Users.js"></script>
     <script src="./src/users/UserController.js"></script>
     <script src="./src/users/UserService.js"></script>
     <script src="audiosynth.js"></script>
-    <script src="http://vjs.zencdn.net/5.8.6/video.js"></script>
+    <script src="https://vjs.zencdn.net/5.8.6/video.js"></script>
     <script src="./qwertyhancock.js"></script>
     <script src="./synth.js"></script>
   <!--  <script type="text/javascript" src="./cb-scripts.js"> -->
 
     <script type="text/javascript">
-          angular
-              .module('909stories', ['ngMaterial', 'users'])
-              .config(function($mdThemingProvider, $mdIconProvider){
-                  $mdIconProvider
-                      .defaultIconSet("./assets/svg/avatars.svg", 128)
-                      .icon("menu"       , "./assets/svg/menu.svg"        , 24)
-                      .icon("share"      , "./assets/svg/share.svg"       , 24)
-                      .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
-                      .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
-                      .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
-                      .icon("phone"      , "./assets/svg/phone.svg"       , 512);
 
-                      $mdThemingProvider.theme('default')
-                          .primaryPalette('grey')
-                          .accentPalette('red');
+        var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        var isEdge = !isIE && !!window.StyleMedia;
+        var isChrome = !!window.chrome && !!window.chrome.webstore;
+        var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-              });
+        if(isSafari) {
+          var element = document.getElementById('topSynth');
+          element.parentNode.removeChild(element);
+        }
+
     </script>
 
+    <script>
+        angular
+            .module('909stories', ['ngMaterial', 'users'])
+            .config(function($mdThemingProvider, $mdIconProvider){
+                $mdIconProvider
+                    .defaultIconSet("./assets/svg/avatars.svg", 128)
+                    .icon("menu"       , "./assets/svg/menu.svg"        , 24)
+                    .icon("share"      , "./assets/svg/share.svg"       , 24)
+                    .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
+                    .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
+                    .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
+                    .icon("phone"      , "./assets/svg/phone.svg"       , 512);
 
+                    $mdThemingProvider.theme('default')
+                        .primaryPalette('grey')
+                        .accentPalette('red');
+
+            });
+
+
+
+</script>
 
 <script>
-
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;

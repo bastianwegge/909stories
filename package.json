@@ -5,11 +5,11 @@
   "description": "A starter project for AngularJS Material",
   "repository": "https://github.com/angular/material-start",
   "licenses": [
-       {
-         "type": "MIT",
-         "url": "https://github.com/angular/material/blob/master/LICENSE"
-       }
-     ],  
+    {
+      "type": "MIT",
+      "url": "https://github.com/angular/material/blob/master/LICENSE"
+    }
+  ],
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "^2.0.0",
@@ -20,8 +20,13 @@
     "selenium-webdriver": "^2.45.1"
   },
   "scripts": {
-    "postinstall": "bower update",
+    "postinstall": "bower install",
     "prestart": "npm update",
-    "test": "protractor ./e2e/protractor.conf.js"
+    "test": "protractor ./e2e/protractor.conf.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4"
   }
 }
