@@ -1,0 +1,37 @@
+.head-title-909{
+	font-family: 'TR-909'; 
+	font-size: 10vw; 
+	color: #fff; 
+	-webkit-text-stroke: 0.3vw white;
+}
+
+.text-title-909{
+	font-family: 'TR-909';
+	font-size: 5vw;
+	color: #fff;
+	justify-content: center;
+}
+
+.bio-image-909{
+	max-width: 30vw;
+}
+
+.text-bold-909{
+	padding-top: 20px; 
+	padding-bottom: 5px;
+}
+
+.text-909{
+	font-size: 16px;
+	color: white;
+}
+
+.md-tab:first-child{color: #ddd !important; } 
+ .md-tab:nth-child(2){color: #ddd !important; } 
+  .md-tab:nth-child(3){color: #ddd !important; } 
+   .md-tab:nth-child(4){color: #ddd !important; } 
+    .md-tab:nth-child(5){color: #ddd !important; } 
+     .md-tab:nth-child(6){color: #ddd !important; } 
+      .md-tab:nth-child(7){color: #ddd !important; } 
+       .md-tab:nth-child(8){color: #ddd !important; } 
+        .md-tab:nth-child(9){color: #ddd !important; } 
