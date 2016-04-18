@@ -35,3 +35,19 @@
       .md-tab:nth-child(7){color: #ddd !important; } 
        .md-tab:nth-child(8){color: #ddd !important; } 
         .md-tab:nth-child(9){color: #ddd !important; } 
+
+
+.grayscale-909{
+	-webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.divider-909{
+	padding-top: 19px;
+}
+
+.divider-x2-909{
+	padding-top: 38px;
+}
