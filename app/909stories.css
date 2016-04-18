@@ -26,15 +26,15 @@
 	color: white;
 }
 
-.md-tab:first-child{color: #ddd !important; } 
- .md-tab:nth-child(2){color: #ddd !important; } 
-  .md-tab:nth-child(3){color: #ddd !important; } 
-   .md-tab:nth-child(4){color: #ddd !important; } 
-    .md-tab:nth-child(5){color: #ddd !important; } 
-     .md-tab:nth-child(6){color: #ddd !important; } 
-      .md-tab:nth-child(7){color: #ddd !important; } 
-       .md-tab:nth-child(8){color: #ddd !important; } 
-        .md-tab:nth-child(9){color: #ddd !important; } 
+.md-tab:first-child{color: #fff !important; } 
+ .md-tab:nth-child(2){color: #fff !important; } 
+  .md-tab:nth-child(3){color: #fff !important; } 
+   .md-tab:nth-child(4){color: #fff !important; } 
+    .md-tab:nth-child(5){color: #fff !important; } 
+     .md-tab:nth-child(6){color: #fff !important; } 
+      .md-tab:nth-child(7){color: #fff !important; } 
+       .md-tab:nth-child(8){color: #fff !important; } 
+        .md-tab:nth-child(9){color: #fff !important; } 
 
 
 .grayscale-909{

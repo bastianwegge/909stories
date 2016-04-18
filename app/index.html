@@ -10,7 +10,7 @@
 
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0/angular-material.min.css"/>
-    <!-- <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/> -->
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
     <link rel="stylesheet" href="909stories.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -124,13 +124,16 @@
           <md-tab id="events" label="UPCOMING EVENTS">
             <md-content class="md-padding" layout-align="center center" style="background-color: #222; color: white;">
               
-              <div layout="column" layout-padding layout-align="center center" class="grayscale-909">
+            
 
               <a href="https://www.facebook.com/events/1735691743311107/" target="_blank">
-                <img flex src="./img/conny4.jpg" style="max-width: 100%;" class="md-whiteframe-z3">
+                <img flex src="./img/conny4.jpg" style="max-width: 100%;" class="md-whiteframe-z3 grayscale-909">
               </a>
-              <strong>909 Stories - 2 Jahre [LIVE LIVE LIVE] /w Julian Meinke & Janosch Marek</strong>
-
+              <div flex class="divider-909">
+                <p style="text-align: center;">
+                  <strong>909 Stories - 2 Jahre [LIVE LIVE LIVE] /w Julian Meinke & Janosch Marek</strong>
+                </p>
+              </div>
               <div flex-offset="5" flex="90" flex-xs="100" flex-offset-xs="0" layout="row" layout-xs="column" layout-sm="column" layout-padding>
                 <p flex="50" flex-sm="100" flex-xs="100" layout="column" style="text-align: justify;" class="text-909">
                   Hallo liebe Pornofreunde - aufgepasst,
@@ -157,7 +160,7 @@
               </div>
               
 
-              </div>
+            
             </md-content>
           </md-tab>
 
@@ -476,40 +479,62 @@
         <div layout="column">
 
           <md-card class="grayscale-909">
-            <iframe class="md-whiteframe-z3" width="100%" height="400" src="https://www.youtube.com/embed/DrQgv310GIo" frameborder="0" allowfullscreen></iframe>
-          </md-card>
-          <md-card style="height: 300px; background-color: #000;">
-            <video id="909 Stories - Stur" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
-              <!-- <source src="./video/909stur.mp4" type='video/mp4'>
-              <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-              </p>-->
-            </video>
+            <iframe class="md-whiteframe-z3" width="100%" height="400"  src="https://www.youtube.com/embed/DrQgv310GIo" frameborder="0" allowfullscreen></iframe>
           </md-card>
         </div>
       </md-card>
 
 
       <md-card layout-padding style="background-color: #222;">
-        <div layout-align="center center" layout="column" style="margin-top: 2%;">
+        <div flex layout-align="center center" layout="column" style="margin-top: 2%;">
           <span class="head-title-909">
             Story
           </span>
-          <div flex-offset="5" flex="90" flex-xs="100" flex-offset-xs="0" layout="row" layout-xs="column" layout-sm="column" layout-padding>
-            <p flex="50" flex-sm="100" flex-xs="100" layout="column" style="text-align: justify;" class="text-909">
-              909 Stories - In zwei Jahren wurde aus einer kleinen Party im Rahmen von Freunden eine ernst zu nehmende Veranstaltungsreihe in Münster und Hamburg. Das Team - damals noch zu viert - wuchs seit der ersten Veranstaltung auf die stolze Summe von 18 Leuten. Nicht zu vergessen sind die Leute, die zahlreich zu unseren Parties gekommen sind und aus der 909 Stories das gemacht haben, worauf wir heute bauen, um unsere Tour zu planen und zu veranstalten.
-              <span class="divider-909"></span>
-              Wir schreiben den 14.05.2014, 14:00 Uhr - Der Aufbau für die erste 909 Stories findet im Favela (Hawerkamp, Münster) in familiärer Atmosphäre statt. Dekoration spielte auf unseren Veranstaltungen schon immer eine große Rolle. So haben wir uns durch diverse Arten von Dekoration gewurschtelt und sind stets mit Visuals und Bannern ausgestattet. Schilder auf der Tanzfläche, die in großen Lettern zum „WEITERMACHEN“ animieren oder die Namen der DJs zeigen, die gerade auflegen, gehörten ebenfalls zur Vorbereitung. Innerhalb der nächsten drei Stunden verwandelten wir das Favela in die 909 Höhle. Dazu gehörte eine abgehangene Decke, das Verschließen der Fenster & Rolladen für den Sunrise-Effekt und eine eigens dafür gebaute Visual-Konstruktion.
+        </div>
+        <md-tabs layout-padding md-center-tabs="true" md-dynamic-height md-border-bottom style="background-color: #222;">
 
-            </p>
-            <p flex="50" flex-sm="100" flex-xs="100" layout="column" style="text-align: justify;" class="text-909">
-              Danach dann der wichtigste Teil der Vorbereitung einer Party:  Vorschlafen. Unsere Parties und allgemein Parties im Favela sind und waren dafür bekannt, bis in die Morgenstunden zu gehen. „Das kann schon mal 8-9 Uhr werden“, sagen wir immer beherzt wenn die Leute fragen, wie lange wir denn noch machen. Gegen 22 Uhr ging es dann noch mal mit allen gemeinsam etwas essen und zusammen in den Club. 
-              <span class="divider-909"></span>
-              Die anfänglichen Stunden am Hawerkamp sind durch gähnende Leere bekannt; der Großteil der feiernden Menschen macht sich nämlich erst zwischen zwei und vier Uhr auf den Weg.  Als wir um drei Uhr volles Haus hatten und der Club-Besitzer mit einem Lächeln herumlief, war für uns klar: Der Abend ist jetzt schon ein Erfolg.
-             </p>
-          </div>
+        <md-tab id="story" label="UNSERE GESCHICHTE">
+            <md-content class="md-padding" layout-align="center center" style="background-color: #222; color: white;">
 
+              <div flex-offset="5" flex="90" flex-xs="100" flex-offset-xs="0" layout="row" layout-xs="column" layout-sm="column" layout-padding>
+                <p flex="50" flex-sm="100" flex-xs="100" layout="column" style="text-align: justify;" class="text-909">
+                  909 Stories - In zwei Jahren wurde aus einer kleinen Party im Rahmen von Freunden eine ernst zu nehmende Veranstaltungsreihe in Münster und Hamburg. Das Team - damals noch zu viert - wuchs seit der ersten Veranstaltung auf die stolze Summe von 18 Leuten. Nicht zu vergessen sind die Leute, die zahlreich zu unseren Parties gekommen sind und aus der 909 Stories das gemacht haben, worauf wir heute bauen, um unsere Tour zu planen und zu veranstalten.
+                  <span class="divider-909"></span>
+                  Wir schreiben den 14.05.2014, 14:00 Uhr - Der Aufbau für die erste 909 Stories findet im Favela (Hawerkamp, Münster) in familiärer Atmosphäre statt. Dekoration spielte auf unseren Veranstaltungen schon immer eine große Rolle. So haben wir uns durch diverse Arten von Dekoration gewurschtelt und sind stets mit Visuals und Bannern ausgestattet. Schilder auf der Tanzfläche, die in großen Lettern zum „WEITERMACHEN“ animieren oder die Namen der DJs zeigen, die gerade auflegen, gehörten ebenfalls zur Vorbereitung. Innerhalb der nächsten drei Stunden verwandelten wir das Favela in die 909 Höhle. Dazu gehörte eine abgehangene Decke, das Verschließen der Fenster & Rolladen für den Sunrise-Effekt und eine eigens dafür gebaute Visual-Konstruktion.
+                </p>
+                <p flex="50" flex-sm="100" flex-xs="100" layout="column" style="text-align: justify;" class="text-909">
+                  Danach dann der wichtigste Teil der Vorbereitung einer Party:  Vorschlafen. Unsere Parties und allgemein Parties im Favela sind und waren dafür bekannt, bis in die Morgenstunden zu gehen. „Das kann schon mal 8-9 Uhr werden“, sagen wir immer beherzt wenn die Leute fragen, wie lange wir denn noch machen. Gegen 22 Uhr ging es dann noch mal mit allen gemeinsam etwas essen und zusammen in den Club. 
+                  <span class="divider-909"></span>
+                  Die anfänglichen Stunden am Hawerkamp sind durch gähnende Leere bekannt; der Großteil der feiernden Menschen macht sich nämlich erst zwischen zwei und vier Uhr auf den Weg.  Als wir um drei Uhr volles Haus hatten und der Club-Besitzer mit einem Lächeln herumlief, war für uns klar: Der Abend ist jetzt schon ein Erfolg.
+                </p>
+              </div>
+            </md-content>
+          </md-tab>
+
+          <md-tab id="past-events" label="BILDER">
+            <md-content class="md-padding" layout="row" layout-xs="column" layout-sm="column" class="md-padding" layout-align="center" style="background-color: #222; color: white;">
+              <div layout-padding flex="50" flex-xs="100" flex-sm="100" class="grayscale-909">
+                <img class="md-whiteframe-z3" src="img/events/VA01.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/VA02.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/VA03.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/Parties01.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/Parties02.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/Parties05.jpg"/>
+              </div>
+
+              <div layout-padding flex="50" flex-xs="100" flex-sm="100" class="grayscale-909">
+                <img class="md-whiteframe-z3" src="img/events/VA04.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/VA05.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/VA06.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/Parties03.jpg"/>
+                <img class="md-whiteframe-z3" src="img/events/Parties04.jpg"/>
+                
+              </div>           
+            
+            </md-content>
+          </md-tab>
+
+        </md-tabs>
       </md-card>
 
 
