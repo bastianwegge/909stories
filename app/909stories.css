@@ -26,6 +26,12 @@
 	color: white;
 }
 
+.text-grey-909{
+	font-size: 16px;
+	color: #666;
+}
+
+
 .md-tab:first-child{color: #fff !important; } 
  .md-tab:nth-child(2){color: #fff !important; } 
   .md-tab:nth-child(3){color: #fff !important; } 
